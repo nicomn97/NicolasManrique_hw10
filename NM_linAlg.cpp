@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double** matrix_product(int f1, int c1, int f2, int c2, double m1, double m2);
+double** matrix_product(int rowA, int colA, int rowB, int colB, double A, double B);
 
 int main(){
 
@@ -48,7 +48,7 @@ int main(){
     for ( m=0; m<rowB; m++){
         for (n=0; n<colB; n++){
             cout<<"Elemento "<<m<<","<<n<<": ";
-            cin>>A[m][n];
+            cin>>B[m][n];
         }
     }
 
@@ -59,6 +59,7 @@ int main(){
         }
         cout << "\n";
     }
+    return 0;
 }
 
 
