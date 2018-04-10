@@ -32,10 +32,12 @@ int main(){
     int k;
     for ( j=0; j<rowA; j++){
         for (k=0; k<colA; k++){
-            cout<<"Elemento"<<j<<","<<k<<": ";
+            cout<<"Elemento "<<j<<","<<k<<": ";
             cin>>A[j][k];
         }
     }
+
+    cout<<"Ingresar elementos de matriz B\n";
     double **B = new double*[rowB];
     int l;
     for ( l=0; l<rowB; l++){
@@ -45,7 +47,7 @@ int main(){
     int n;
     for ( m=0; m<rowB; m++){
         for (n=0; n<colB; n++){
-            cout<<"Elemento"<<m<<","<<n<<": ";
+            cout<<"Elemento "<<m<<","<<n<<": ";
             cin>>A[m][n];
         }
     }
@@ -68,11 +70,12 @@ double** matrix_product(int rowA, int colA, int rowB, int colB, double A, double
     for ( i=0; i<rowA; i++){
         mat[i] = new double[colB];
     }
-    int k;
     int j;
+    int k;
     for ( j=0; j<colA; j++){
+        double prov = 0;
         for (j=0; j<colB; j++){
-            mat[i][j]=lol;
+            mat[i][j]=i*j;
         }
     }
 
